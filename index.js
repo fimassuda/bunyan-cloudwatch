@@ -114,7 +114,7 @@ function createLogStream(cloudwatch, logGroupName, logStreamName, cb) {
 function createCWLog(bunyanLog) {
   var message = {};
   for (var key in bunyanLog) {
-    if (key === 'time') continue;
+    // if (key === 'time') continue;
     message[key] = bunyanLog[key];
   }
   var log = {
